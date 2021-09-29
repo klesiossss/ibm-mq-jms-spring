@@ -25,8 +25,6 @@ public class PagamentoController {
     @PostMapping
     public ResponseEntity<Object> createOrder(@RequestBody PagamentoDTO pagamento) throws JMSException {
     
-
-    	
         MQQueue pagamentoQueue = new MQQueue("DEV.QUEUE.1");
 
         jmsTemplate.convertAndSend(pagamentoQueue, pagamento, textMessage -> {

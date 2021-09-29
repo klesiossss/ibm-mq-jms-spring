@@ -1,7 +1,8 @@
 package br.com.mqclient1.model;
 
+import org.springframework.stereotype.Component;
 
-
+@Component
 public class PagamentoDTO {
 	String identifier;
 	String message;
