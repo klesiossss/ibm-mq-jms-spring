@@ -21,8 +21,6 @@ public class PagamentoListener {
     @JmsListener(destination = "DEV.QUEUE.1")
     public void receive(Message message) throws JMSException, JsonMappingException, JsonProcessingException {
         TextMessage textMessage = (TextMessage) message;
-      //  log.info("### 4 ### Order Service received message response : {} with correlation id: {}",
-       //         textMessage.getText(), textMessage.getJMSCorrelationID());
 
        ObjectMapper mapper = new ObjectMapper();
        
@@ -30,7 +28,6 @@ public class PagamentoListener {
         
        PagamentoDTO pagamento = mapper.readValue(payload, PagamentoDTO.class);
         
-       // textMessage.getBody(String.class);
         System.out.println(pagamento.getIdentifier());
         System.out.println(pagamento.getMessage());
    
