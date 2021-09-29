@@ -15,7 +15,7 @@ import javax.jms.TextMessage;
 import java.nio.charset.StandardCharsets;
 
 
-@RequestMapping("pagamento")
+@RequestMapping("/pagamento")
 @RestController
 public class PagamentoController {
 
