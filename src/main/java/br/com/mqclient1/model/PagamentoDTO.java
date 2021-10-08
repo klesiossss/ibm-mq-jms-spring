@@ -15,8 +15,6 @@ public class PagamentoDTO {
 	
 	}
 	
-	
-	
 	public String getIdentifier() {
 		return identifier;
 	}
